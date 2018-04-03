@@ -28,6 +28,7 @@ public class MyMainSearch {
         mainPage.SearchFilterBlock("по цене");
         mainPage.EnterStartPrice("5000");
         mainPage.EnterFinalPrice("7000");
+        //test updates
 
     }
 
