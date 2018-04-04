@@ -12,7 +12,7 @@ import yan.elements.*;
  */
 
 public class MarketPage {
-//    private WebDriver driver;
+    private WebDriver driver;
     private TopMenu topMenu;
     private LeftCatalogMenu leftCatalogMenu;
     private HeadlineHeader headlineHeader;
@@ -24,6 +24,14 @@ public class MarketPage {
         PageFactory.initElements(new HtmlElementDecorator(new HtmlElementLocatorFactory(driver)), this);
 //        this.driver = driver;
     }
+
+    public SearchPage searchFor() {
+        this.SearchFilterBlock("по цене");
+        this.EnterStartPrice("5000");
+        this.EnterFinalPrice("7000");
+        return new SearchPage(driver);
+    }
+
 
     public void SearchComputers () {
         topMenu.searchTMComputers();

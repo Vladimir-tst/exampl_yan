@@ -2,6 +2,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 import yan.pages.MarketPage;
+import yan.pages.SearchPage;
 
 /**
  * Created by Vladimir on 01.04.2018.
@@ -25,9 +26,11 @@ public class MyMainSearch {
         mainPage.SearchComponents("Комплектующие");
         mainPage.SearchComponents("Процессоры (CPU)");
         mainPage.SearchComponentsHH("Intel");
-        mainPage.SearchFilterBlock("по цене");
-        mainPage.EnterStartPrice("5000");
-        mainPage.EnterFinalPrice("7000");
+//        MainPage mainPage = new MainPage(driver);
+        SearchPage page = mainPage.searchFor();
+//        mainPage.SearchFilterBlock("по цене");
+//        mainPage.EnterStartPrice("5000");
+//        mainPage.EnterFinalPrice("7000");
         //test updates
 
     }
