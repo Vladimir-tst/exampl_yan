@@ -22,7 +22,6 @@ public class SearchResults extends HtmlElement {
     }
 
     public ArrayList<Integer> getSearchPrices() {
-//        System.out.println("bbb");
 
         ArrayList<Integer> resultPrice = new ArrayList<Integer>();
         List<WebElement> resultSearch = searchPrices;

@@ -18,11 +18,9 @@ public class SearchPrepack extends HtmlElement {
     @FindBy(css = ".lih4lXS8EN [class = '_2yK7W3SWQ- _1f2usTwyAs']")
     private TextInput finalPrice;
 
-//    private List<Link> lfTMElem;
-
     public void enterStartPrice(String enterPrice) {
         startPrice.sendKeys(enterPrice);
-        }
+    }
     public void enterFinalPrice(String enterPrice) {
         finalPrice.sendKeys(enterPrice);
     }

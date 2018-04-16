@@ -1,5 +1,6 @@
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import yan.pages.MarketPage;
@@ -17,7 +18,9 @@ public class MyMainSearch {
 
     @BeforeTest
     public void loadStartPage() {
-        driver = new ChromeDriver();
+//        driver = new ChromeDriver();
+        driver = new FirefoxDriver();
+
         driver.manage().window().maximize();
 //        driver.get("http://market.yandex.ru/");
         driver.get("https://market.yandex.ru/catalog/54425?hid=91009&track=menu");
