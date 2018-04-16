@@ -12,10 +12,7 @@ import ru.yandex.qatools.htmlelements.element.HtmlElement;
  * Created by Vladimir on 01.04.2018.
  */
 
-//@FindBy(className = "topmenu__list")
-//@Name("Search Form")
 @FindBy(className = "topmenu__list")
-//@Block(@FindBy(className = "topmenu__list"))
 public class TopMenu extends HtmlElement {
     @FindBy(xpath = "//*[@class = 'link topmenu__link'][text()='Компьютеры']")
     private WebElement topMenuComputers;
@@ -23,6 +20,4 @@ public class TopMenu extends HtmlElement {
     public void searchTMComputers() {
         topMenuComputers.click();
     }
-
-
 }

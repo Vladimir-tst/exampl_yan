@@ -15,24 +15,16 @@ public class FilterBlock extends HtmlElement {
 
     @FindBy(xpath = ".//a[@class = 'link link_theme_major n-filter-sorter__link i-bem link_js_inited']")
     private List<WebElement> lfTMElem;
-//    private List<Link> lfTMElem;
 
     public void searchByName(String nameEl) {
 
         boolean proof;
         for (WebElement ln : lfTMElem) {
-            //String drd = ln.getText();
             String drd = ln.getAttribute("textContent");
-
-//            System.out.println(drd);
-
             if(drd.equals(nameEl)){
                 ln.click();
                 break;
             }
-//            System.out.println(drd);
         }
     }
-
-
 }

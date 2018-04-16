@@ -12,32 +12,34 @@ import yan.elements.*;
 public class SearchPage {
     private WebDriver driver;
 
-    private FilterBlock filterBlock;
-    private SearchPrepack searchPrepack;
+//    private FilterBlock filterBlock;
+//    private SearchPrepack searchPrepack;
+    private SearchResults searchResults;
 
     public SearchPage(WebDriver driver) {
         PageFactory.initElements(new HtmlElementDecorator(new HtmlElementLocatorFactory(driver)), this);
         this.driver = driver;
     }
-    public void SearchFilterBlock (String nameElement) {
-        filterBlock.searchByName(nameElement);
-    }
-    public void EnterStartPrice (String nameElement) {
-        searchPrepack.enterStartPrice(nameElement);
-    }
-
-    public void EnterFinalPrice (String nameElement) {
-        searchPrepack.enterFinalPrice(nameElement);
-    }
-
-    public SearchPage searchFor() {
-        this.SearchFilterBlock("по цене");
-        this.EnterStartPrice("5000");
-        this.EnterFinalPrice("7000");
-        return this;
-    }
-
-//    public SearchResults getSearchResults() {
-//        return this.searchResults;
+////    public void SearchFilterBlock (String nameElement) {
+////        filterBlock.searchByName(nameElement);
+////    }
+////    public void EnterStartPrice (String nameElement) {
+////        searchPrepack.enterStartPrice(nameElement);
+////    }
+////
+////    public void EnterFinalPrice (String nameElement) {
+////        searchPrepack.enterFinalPrice(nameElement);
+////    }
+//
+//    public SearchPage searchFor() {
+//        System.out.println("======yyyy=======");
+////        this.SearchFilterBlock("по цене");
+////        this.EnterStartPrice("5000");
+////        this.EnterFinalPrice("7000");
+//        return this;
 //    }
+
+    public SearchResults getSearchResults() {
+        return this.searchResults;
+    }
 }
