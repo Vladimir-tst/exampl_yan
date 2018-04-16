@@ -37,10 +37,10 @@ public class MyMainSearch {
         mainPage.SearchComponentsHH("Intel");
 
         SearchPage page = mainPage.searchForTask();
-        boolean isListReliable = page.getSearchResults().getSearchPrices().
+        boolean isListDeviation = page.getSearchResults().getSearchPrices().
                 stream().anyMatch(i -> i<5000 || i>7000);
 
-        Assert.assertFalse(isListReliable);
+        Assert.assertFalse(isListDeviation);
     }
 
     @AfterTest
